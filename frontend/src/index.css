@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  h1, h2, h3, .font-heading {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+  }
+}
+
+/* Print specific styles for Hall Pass generation */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .no-print, nav, header, button, .print-hide {
+    display: none !important;
+  }
+  #printable-hall-pass, #printable-hall-pass * {
+    visibility: visible;
+  }
+  #printable-hall-pass {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 1.5rem;
+    box-shadow: none !important;
+    border: 2px solid #000 !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+}
+
+/* Custom animations & glassmorphism */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}

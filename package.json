@@ -1,0 +1,37 @@
+{
+  "name": "college-exam-timetable-hallpass-portal",
+  "version": "1.0.0",
+  "description": "College Exam Timetable & Digital Hall Pass Portal with Admin and Student Portals",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "install-all": "npm install && npm --prefix frontend install",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb-memory-server": "^10.1.0",
+    "mongoose": "^8.9.5"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "nodemon": "^3.1.9"
+  },
+  "keywords": [
+    "exam-timetable",
+    "hall-pass",
+    "college-portal",
+    "express",
+    "react",
+    "mongodb"
+  ],
+  "author": "College Portal Engineering Team",
+  "license": "MIT"
+}
